@@ -2,11 +2,122 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: "manrope";
+    font-family: sans-serif;
 }
 
 
-/* @font-face {
-    font-family: Manrope;
-    src: url();
-} */
+:root {
+    --VeryDarkGrayishBlue: hsl(217, 19%, 35%);
+    --DesaturatedDarkBlue: hsl(214, 17%, 51%);
+    --GrayishBlue: hsl(212, 23%, 69%);
+    --LightGrayishBlue: hsl(210, 46%, 95%);
+}
+
+@font-face {
+    font-family: "manrope-regular";
+    src: url(fonts/Manrope/static/Manrope-Regular.ttf);
+}
+
+@font-face {
+    font-family: "manrope-bold";
+    src: url(fonts/Manrope/static/Manrope-Bold.ttf);
+}
+
+
+.bold-text {
+    font-family: manrope-bold;
+}
+
+.regular-text {
+    font-family: manrope-regular;
+    color: var(--DesaturatedDarkBlue)
+}
+
+
+body {
+    background: var(--LightGrayishBlue);
+    display: grid;
+    place-items: center;
+    padding: 100px 30px;
+}
+
+#drawers-image {
+    width: 100%;
+    max-width: 500px;
+    object-fit: cover;
+}
+
+#user-image {
+    max-width: 50px;
+    border-radius: 50%;
+}
+
+button.share-button {
+    max-width: 50px;
+    border-radius: 50%;
+    border: none;
+    width: 30px;
+    aspect-ratio: 1;
+}
+
+
+main {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    max-width: 800px;
+    /* max-height: 350px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section.text-and-info-section {
+    color: var(--VeryDarkGrayishBlue);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+div.actual-text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+h2.bold-text {
+    line-height: 1.6;
+    font-size: clamp(1rem, 4.4vw, 1.2rem);
+}
+
+p.discription, p.publish-date {
+    font-size: clamp(0.8rem, 4vw, 1rem);
+}
+
+div.writer-info-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+div.name-and-publish-date-container {
+    position: relative;
+    right: 10px
+}
+
+p.writer-name {
+    font-size: clamp(0.9rem, 4vw, 1.1rem);
+}
+
+
+@media (min-width: 500px) {
+    main {
+        flex-direction: row;
+    }
+    #drawers-image {
+        min-width: 300px;
+        align-self: stretch;
+    }
+}
