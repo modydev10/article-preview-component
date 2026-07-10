@@ -8,9 +8,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
-
   <title>Frontend Mentor | Article preview component</title>
-
 </head>
 
 <body>
@@ -20,30 +18,50 @@
     <section class="text-and-info-section">
       <div class="actual-text-container">
         <h2 class="bold-text">
-        Shift the overall look and feel by adding these wonderful
-        touches to furniture in your home
-      </h2>
-      <p class="discription regular-text">
-        Ever been in a room and felt like something was missing? Perhaps
-        it felt slightly bare and uninviting. I’ve got some simple tips
-        to help you make any room feel complete.
-      </p>
-    </div>
-    <div class="writer-info-container">
-      <img src="images/avatar-michelle.jpg" alt="" id="user-image">
-      <div class="name-and-publish-date-container">
-        <p class="writer-name bold-text">Michelle Appleton</p>
-        <p class="publish-date regular-text">28 Jun 2020</p>
+          Shift the overall look and feel by adding these wonderful
+          touches to furniture in your home
+        </h2>
+        <p class="discription regular-text">
+          Ever been in a room and felt like something was missing? Perhaps
+          it felt slightly bare and uninviting. I’ve got some simple tips
+          to help you make any room feel complete.
+        </p>
       </div>
-      <button class="share-button" type="button"><img src="images/icon-share.svg" alt="share image in the button" id="share-image" ></button>
-    </div>
-  </section>
+      <div class="writer-info-container">
+        <div class="left-side-container">
+          <div class="first-inner-container">
+            <img src="images/avatar-michelle.jpg" alt="" id="user-image">
+            <div class="name-and-publish-date-container">
+              <p class="writer-name bold-text">Michelle Appleton</p>
+              <p class="publish-date regular-text">28 Jun 2020</p>
+            </div>
+          </div>
+          <div class="mobile-links-inner-container hidden">
+            <span>SHARE</span>
+            <a href=""><img src="images/icon-facebook.svg" class="link-icon" alt="facebood-icon"></a>
+            <a href=""><img src="images/icon-twitter.svg" class="link-icon" alt="twitter-icon"></a>
+            <a href=""><img src="images/icon-pinterest.svg" class="link-icon" alt="pinterest-icon"></a>
+          </div>
+        </div>
+        <div class="right-side-container">
+          <button id="share-button" class="share-button" type="button"><img src="images/icon-share.svg"
+              alt="share image in the button" id="share-image">
+            </button>
+          <div class="desktop-links-inner-container hidden">
+            <span>SHARE</span>
+            <a href=""><img src="images/icon-facebook.svg" class="link-icon" alt="facebood-icon"></a>
+            <a href=""><img src="images/icon-twitter.svg" class="link-icon" alt="twitter-icon"></a>
+            <a href=""><img src="images/icon-pinterest.svg" class="link-icon" alt="pinterest-icon"></a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
-
   <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noopener">Frontend Mentor</a>. 
-    Coded by <a href="#https://www.frontendmentor.io/profile/modydev10" target="_blank" rel="noopener">modydev10</a>.
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noopener">Frontend
+      Mentor</a>.
+    Coded by <a href="https://www.frontendmentor.io/profile/modydev10" target="_blank" rel="noopener">modydev10</a>.
   </footer>
   <script src="script.js"></script>
 </body>
