@@ -46,6 +46,14 @@ body {
     object-fit: cover;
 }
 
+.rounded-top-borders {
+    border-radius: 12px 12px 0 0;
+}
+
+.rounded-left-borders {
+    border-radius: 12px 0 0 12px;
+}
+
 #user-image {
     max-width: 50px;
     border-radius: 50%;
@@ -55,7 +63,6 @@ body {
 main {
     background: #fff;
     border-radius: 12px;
-    /* overflow: hidden; */
     max-width: 800px;
     display: flex;
     flex-direction: column;
@@ -129,12 +136,12 @@ div.mobile-links-inner-container img {
 
 div.right-side-container {
     position: relative;
-    border: 2px solid red;
     display: grid;
     place-items: center;
 }
 
 div.desktop-links-inner-container {
+    position: absolute;
     width: 250px;
     padding: 15px;
     position: absolute;

@@ -1,6 +1,8 @@
 const shareBtn = document.getElementById("share-button");
 const writerInfoContainer = document.querySelector(".writer-info-container");
 
+const drawersImage = document.getElementById("drawers-image");
+
 const firstInnerContainer = document.querySelector(".first-inner-container");
 const mobileLinksInnerContainer = document.querySelector(
   ".mobile-links-inner-container",
@@ -37,8 +39,35 @@ function showSocialLinks() {
   }
 }
 
+
+function changeImageBorders() {
+  const screenWidth = window.innerWidth;
+  
+  if (screenWidth <= 600) {
+    drawersImage.classList.remove("rounded-left-borders");
+    drawersImage.classList.add("rounded-top-borders");
+  } else if (screenWidth > 600) {
+    drawersImage.classList.remove("rounded-top-borders");
+    drawersImage.classList.add("rounded-left-borders");
+  }
+}
+
+window.addEventListener("DOMContentLoaded", changeImageBorders);
+
+
+
 window.addEventListener("resize", () => {
   const screenWidth = window.innerWidth;
+
+  changeImageBorders();
+
+  if (screenWidth <= 600) {
+    drawersImage.classList.remove("rounded-left-borders");
+    drawersImage.classList.add("rounded-top-borders");
+  } else if (screenWidth > 600) {
+    drawersImage.classList.remove("rounded-top-borders");
+    drawersImage.classList.add("rounded-left-borders");
+  }
 
   if (screenWidth <= 600 && linksVisible) {
     desktopLinksInnerContainer.classList.add("hidden");
